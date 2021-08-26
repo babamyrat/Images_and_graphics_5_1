@@ -18,9 +18,5 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        MyDrawable mydrawing = new MyDrawable();
-        ImageView image = findViewById(R.id.imageView2);
-        image.setImageDrawable(mydrawing);
-        image.setContentDescription(getResources().getString(R.string.my_image_desc));
     }
 }
