@@ -6,23 +6,22 @@ import androidx.core.content.res.ResourcesCompat;
 
 import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
+import android.graphics.drawable.TransitionDrawable;
 import android.os.Bundle;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
-   private ImageView imageView;
+    CustomDrawableView customDrawableView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        imageView = findViewById(R.id.imageView2);
+        customDrawableView = new CustomDrawableView(this);
 
-        Resources res = this.getResources();
-        Drawable myImage = ResourcesCompat.getDrawable(res, R.drawable.ic_launcher_background, null);
+        setContentView(customDrawableView);
 
-        imageView.setImageDrawable(myImage);
     }
 }
