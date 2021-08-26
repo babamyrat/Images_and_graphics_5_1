@@ -2,8 +2,10 @@ package com.example.images_and_graphics_5_1;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.core.content.res.ResourcesCompat;
 
-import android.graphics.Color;
+import android.content.res.Resources;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -14,9 +16,9 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_main);
-// Create a ConstraintLayout in which to add the ImageView
+
+        // Create a ConstraintLayout in which to add the ImageView
         constraintLayout = new ConstraintLayout(this);
 
         // Instantiate an ImageView and define its properties
@@ -34,5 +36,4 @@ public class MainActivity extends AppCompatActivity {
         constraintLayout.addView(i);
         setContentView(constraintLayout);
     }
-
 }
