@@ -12,16 +12,15 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
-    CustomDrawableView customDrawableView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        customDrawableView = new CustomDrawableView(this);
-
-        setContentView(customDrawableView);
-
+        MyDrawable mydrawing = new MyDrawable();
+        ImageView image = findViewById(R.id.imageView2);
+        image.setImageDrawable(mydrawing);
+        image.setContentDescription(getResources().getString(R.string.my_image_desc));
     }
 }
